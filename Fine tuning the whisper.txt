@@ -1,0 +1,513 @@
+"The engineer initiated the asynchronous protocol to update the legacy server."
+
+"Unexpectedly, a redundancy error caused the data pipeline to stagnate completely."
+
+"We immediately decided to troubleshoot the infrastructure before the latency spiked."
+
+"Simultaneously, she implemented a cryptographic patch to secure the vulnerable endpoints."
+
+"Finally, the architecture stabilized, and the system returned to total equilibrium."
+
+
+
+┬╗ [Start speaking]
+
+ The engineer initiates the engineer.
+
+ initiated the asynchronous protocol.
+
+ to update the latency server.
+
+ server unexpectedly.
+
+ a redundancy error caused the data 5 plus.
+
+ plane to stagnate completely.
+
+ We immediately decided to troubleshoot the...
+
+ infrastructure before the...
+
+ the latency spiked.
+
+ simultaneously she implemented a.
+
+ cryptography.
+
+ torch to secure the
+
+ vulnerable end of point.
+
+ points.
+
+ Finally, the architecture stabilize.
+
+ stabilized and the system retrain.
+
+ the unit total equilibrium.
+
+ [BLANK_AUDIO]
+
+ [BLANK_AUDIO]
+
+
+
+streamProc = spawn(streamExe, [
+
+      "-m", modelPath,
+
+      "--capture", "0",
+
+      "--step", "3000",           // Update every 500ms (0.5s) for real-time feel
+
+      "--length", "4000",       // 10s buffer: Short enough for speed, long enough for context
+
+      "--keep", "300",           // 400ms overlap to prevent cutting words at boundaries
+
+      "--vad-thold", "0.7",      // STRICT VAD: Ignore audio unless it is 70% probability speech
+
+      "--freq-thold", "200.00",  // Filter out low hum/fans (common cause of phantom text)
+
+      "--beam-size", "1",        // CRITICAL: Forces "Greedy Search". Prevents "creative" random text.
+
+      "--max-tokens", "32",      // Allow enough words for a full interview question
+
+      "--no-fallback",           // CRITICAL: Fail silently instead of guessing random words
+
+      "--audio-ctx", "0"        // Use default context size
+
+    ], { cwd: modelDir });
+
+
+
+
+
+
+
+----
+
+┬╗ [Start speaking]
+
+ Thank you.
+
+ the hearing initiated the assembly.
+
+ in protocol to a
+
+ to get the latency server.
+
+ Next, repeatedly, we are written
+
+ the error caused the data pipeline.
+
+ by 2, stragnet complete.
+
+ be immediately
+
+ be accurate to troubleshoot the infrastructure.
+
+ trust before the latent
+
+ later piped.
+
+ same as me. She...
+
+ Today
+
+ cryptography for
+
+ for the curable endpoints.
+
+ finally, the architecture statement.
+
+ and the system retra-
+
+ the total if you will believe it.
+
+ [BLANK_AUDIO]
+
+
+
+
+
+streamProc = spawn(streamExe, [
+
+      "-m", modelPath,
+
+      "--capture", "0",
+
+      "--step", "2000",         // 2.0s updates (Balance between speed and accuracy)
+
+      "--length", "2000",       // MUST MATCH STEP to stop repetition
+
+      "--keep", "300",          // 300ms context helper (Prevents cutting words at the start)
+
+      "--vad-thold", "0.6",     // 0.6 captures normal speaking better than 0.7
+
+      "--freq-thold", "100.00", // Standard filter
+
+      "--beam-size", "1",       // Greedy search (Faster, less hallucinations)
+
+      "--max-tokens", "32",     
+
+      "--no-fallback",
+
+      "--audio-ctx", "0",
+
+      "--no-gpu"
+
+    ], { cwd: modelDir });
+
+
+
+
+
+
+
+-----
+
+
+
+┬╗ [Start speaking]
+
+ The engineers initially
+
+ initiated the asynchronous protocol to update
+
+ update the legacy server.
+
+ repeatedly a redundancy error caused the data.
+
+ data pipeline to stagnate.
+
+ completely, we immediately decided
+
+ related to troubleshoot the infrastructure.
+
+ before the latency spiked.
+
+ A simon, she simply
+
+ today cryptography patch
+
+ to secure the vulnerable end point.
+
+ points. Finally, the architecture of the
+
+ lecture stabilizer and the system.
+
+ retrain it to the total equilibrium.
+
+
+
+
+
+streamProc = spawn(streamExe, [
+
+      "-m", modelPath,
+
+      "--capture", "0",
+
+      "--step", "3000",           // Update every 500ms (0.5s) for real-time feel
+
+      "--length", "4000",       // 10s buffer: Short enough for speed, long enough for context
+
+      "--keep", "200",           // 400ms overlap to prevent cutting words at boundaries
+
+      "--vad-thold", "0.8",      // STRICT VAD: Ignore audio unless it is 70% probability speech
+
+      "--freq-thold", "250.00",  // Filter out low hum/fans (common cause of phantom text)
+
+      "--beam-size", "1",        // CRITICAL: Forces "Greedy Search". Prevents "creative" random text.
+
+      "--max-tokens", "32",      // Allow enough words for a full interview question
+
+      "--no-fallback",           // CRITICAL: Fail silently instead of guessing random words
+
+      "--audio-ctx", "0"        // Use default context size
+
+    ], { cwd: modelDir });
+
+
+
+
+----
+
+
+┬╗ [Start speaking]
+ The engineer initiated that.
+ protocol to update the legacy server.
+ unexpectedly a redundancy error.
+ caused the data pipeline to stagnate completely.
+ We immediately decided to troubleshoot the infrastructure.
+ structure before the latency spiked.
+ Simultaneously, she implemented a principle.
+ photography, to secure the venerable
+ will end points. Finally, the
+ architecture stabilized and the system
+ returns return to the total equilibrium.
+
+
+streamProc = spawn(streamExe, [
+      "-m", modelPath,
+      "--capture", "0",
+      "-t", "4",               // Force 4 CPU threads (Helps speed significantly)
+      "--step", "4000",           // Update every 500ms (0.5s) for real-time feel
+      "--length", "4000",       // 10s buffer: Short enough for speed, long enough for context
+      "--keep", "100",           // 400ms overlap to prevent cutting words at boundaries
+      "--vad-thold", "0.6",      // STRICT VAD: Ignore audio unless it is 70% probability speech
+      "--freq-thold", "100.00",  // Filter out low hum/fans (common cause of phantom text)
+      "--beam-size", "1",        // CRITICAL: Forces "Greedy Search". Prevents "creative" random text.
+      "--max-tokens", "32",      // Allow enough words for a full interview question
+      "--no-fallback",           // CRITICAL: Fail silently instead of guessing random words
+      "--audio-ctx", "0"        // Use default context size
+    ], { cwd: modelDir });
+
+
+----
+┬╗ [Start speaking]
+ Bye engineers!
+ initiated the Essin coronas protocol.
+ to update the legacy server.
+ unexpectedly, a rhythm and a rhythm.
+ rather, caused the data pipeline.
+ to stagnate completely.
+ We immediately decided to try.
+ trouble should die infrastructure before the late.
+ latency is piked. So I am maintaining
+ She implemented a cryptogram.
+ to secure the vulnerable.
+ end point. Finally, the architecture of the
+ structure stabilized and the system
+ return to the equilibrium.
+ [BLANK_AUDIO]
+
+
+ streamProc = spawn(streamExe, [
+      "-m", modelPath,
+      "--capture", "0",
+      "-t", "4",               // Force 4 CPU threads (Helps speed significantly)
+      "--step", "3000",           // Update every 500ms (0.5s) for real-time feel
+      "--length", "3000",       // 10s buffer: Short enough for speed, long enough for context
+      "--keep", "100",           // 400ms overlap to prevent cutting words at boundaries
+      "--vad-thold", "0.6",      // STRICT VAD: Ignore audio unless it is 70% probability speech
+      "--freq-thold", "100.00",  // Filter out low hum/fans (common cause of phantom text)
+      "--beam-size", "1",        // CRITICAL: Forces "Greedy Search". Prevents "creative" random text.
+      "--max-tokens", "32",      // Allow enough words for a full interview question
+      "--no-fallback",           // CRITICAL: Fail silently instead of guessing random words
+      "--audio-ctx", "0"        // Use default context size
+    ], { cwd: modelDir });
+
+
+----
+
+┬╗ [Start speaking]
+ The engineers initiated the asynchronous
+ as protocol to update the legacy server.
+ unexpectedly a redundancy error caused the data pipeline.
+ 2 stagnate completely, we immediately decided to do this.
+ to troubleshoot the infrastructure before the latency spike.
+ So, I meantaneously, she implemented a, a, a.
+ cryptography patch to secure vulnerable endpoints.
+ Finally, the architecture stabilizes and the systems reaches.
+ written to the total equilibrium.
+
+streamProc = spawn(streamExe, [
+      "-m", modelPath,
+      "--capture", "0",
+      "-t", "4",               // Force 4 CPU threads (Helps speed significantly)
+      "--step", "5000",           // Update every 500ms (0.5s) for real-time feel
+      "--length", "5000",       // 10s buffer: Short enough for speed, long enough for context
+      "--keep", "0",           // 400ms overlap to prevent cutting words at boundaries
+      "--vad-thold", "0.6",      // STRICT VAD: Ignore audio unless it is 70% probability speech
+      "--freq-thold", "100.00",  // Filter out low hum/fans (common cause of phantom text)
+      "--beam-size", "1",        // CRITICAL: Forces "Greedy Search". Prevents "creative" random text.
+      "--max-tokens", "32",      // Allow enough words for a full interview question
+      "--no-fallback",           // CRITICAL: Fail silently instead of guessing random words
+      "--audio-ctx", "0"        // Use default context size
+    ], { cwd: modelDir });
+
+
+
+
+----
+
+┬╗ [Start speaking]
+ Thank you.
+ and I appreciate it.
+ You can also talk on to update the
+ the legacy server.
+ unexpectedly, a redundancy
+ hence error, cause the data by
+ pyrin to stagnate completely.
+ the immediately de-
+ decided to troubleshoot the infrastructure.
+ before the latency spiked.
+ simultaneously she
+ implemented a crypto
+ to be continued.
+ on other points.
+ final the architecture stabilized.
+ and the systems return to the...
+
+
+streamProc = spawn(streamExe, [
+  "-m", modelPath,
+  "--capture", "0",
+  "-t", "4",
+
+  "--step", "2200",       // Fast, stable
+  "--length", "3200",     // Best buffer for sentence correctness
+  "--keep", "250",        // CRITICAL: prevents hallucinations/cuts
+
+  "--vad-thold", "0.65",  // Best balance for human voice
+  "--freq-thold", "200.00", // Removes fan/AC rumble
+
+  "--beam-size", "1",
+  "--max-tokens", "48",   // More natural complete sentences
+  "--no-fallback",
+  "--audio-ctx", "0",
+  "--no-gpu"
+], { cwd: modelDir });
+
+
+
+---
+
+┬╗ [Start speaking]
+ The engineers initiated the asynchronous rotator.
+ to understand the legacy server, unexpected.
+ a redundancy error caused the data pipeline to stack
+ We immediately decided to troubleshoot the antenna.
+ infrastructure before the latency spiked.
+ She implemented a crypto patch.
+ So, secure the vulnerable endpoints.
+ architecture stabilized in and the systems returned to the total equation.
+ equilibrium.
+
+
+streamProc = spawn(streamExe, [
+      "-m", modelPath,
+      "--capture", "0",
+      "-t", "4",               // Performance: Uses all 4 cores
+      "--step", "5000",        // 5s Step: High latency, but High Accuracy
+      "--length", "5000",      // Equal to Step: Kills the "echo" completely
+      "--keep", "0",           // Critical: Prevents "returns return" glitches
+      "--vad-thold", "0.6",    // Good balance for catching soft starts
+      "--freq-thold", "100.00",// Keeps natural voice depth
+      "--beam-size", "1",      // Greedy search (Fastest)
+      "--max-tokens", "64",    // Increased to 64: Prevents cutting off the end of the 5s sentence
+      "--no-fallback",
+      "--audio-ctx", "0",
+      "--no-gpu"
+    ], { cwd: modelDir });
+
+
+---
+
+┬╗ [Start speaking]
+ The engineer initiated the asynchronous
+ protocol to update the legacy server.
+ unexpectedly, a redundancy error.
+ to the data pipeline to stagnate completely.
+ We immediately decided to troubleshoot the
+ the infrastructure before the latency spiked.
+ simultaneously, see implemented a
+ cryptography patch to set
+ the integrable interpoints. Finally, the
+ architecture stabilized and the system written
+ to the equilibrium.
+
+
+const { spawn } = require("child_process");
+
+const streamProc = spawn(streamExe, [
+  "-m", modelPath,
+  "--capture", "0",
+  "-t", "4",             // 4 CPU threads
+
+  "--step", "4000",      // 4s window
+  "--length", "4000",    // match step for no repetition
+  "--keep", "100",       // small overlap (what worked best in your tests)
+
+  "--vad-thold", "0.6",  // better than 0.7/0.8 for your voice
+  "--freq-thold", "100.00",
+
+  "--beam-size", "1",
+  "--max-tokens", "32",
+  "--no-fallback",
+  "--audio-ctx", "0"
+], { cwd: modelDir });
+
+
+
+┬╗ [Start speaking]
+ The engineers initiated the
+ asynchronous protocol to update the legacy server.
+ unexpectedly, where redundancy is
+ error caused the data pipeline to stagger
+ completely, we immediately determine the
+ decided to troubleshoot the infrastructure before the late
+ pregnancy spiked simultaneously.
+ She implemented a cryptography patch to secure the
+ to the venerable interpoints. Finally, the architect
+ lecture, stabilized and the system written to the
+ equilibrium.
+
+┬╗ [Start speaking]
+ The engineers initiated the
+ asynchronous protocol to update the legacy server.
+ unexpectedly, where redundancy is
+ error caused the data pipeline to stagger
+ completely, we immediately determine the
+ decided to troubleshoot the infrastructure before the late
+ pregnancy spiked simultaneously.
+ She implemented a cryptography patch to secure the
+ to the venerable interpoints. Finally, the architect
+ lecture, stabilized and the system written to the
+ equilibrium.
+
+
+const streamProc = spawn(streamExe, [
+  "-m", modelPath,
+  "--capture", "0",
+  "-t", "4",                // 4 CPU threads
+
+  "--step", "4000",         // 4s window
+  "--length", "4000",       // same as step → no repetition window
+  "--keep", "100",          // small overlap (works well with your mic + story)
+
+  "--vad-thold", "0.6",     // good balance for your voice
+  "--freq-thold", "100.00", // doesn’t over-cut speech
+
+  "--beam-size", "1",       // greedy, no creativity
+  "--max-tokens", "32",
+  "--no-fallback",
+  "--audio-ctx", "0",
+  "--no-gpu"
+], { cwd: modelDir });
+
+
+
+
+final
+
+
+const streamProc = spawn(streamExe, [
+  "-m", modelPath,
+  "--capture", "0",
+  "-t", "4",                // 4 CPU threads
+
+  "--step", "4000",         // 4s window
+  "--length", "4000",       // same as step → no repetition window
+  "--keep", "100",          // small overlap (works well with your mic + story)
+
+  "--vad-thold", "0.6",     // good balance for your voice
+  "--freq-thold", "100.00", // doesn’t over-cut speech
+
+  "--beam-size", "1",       // greedy, no creativity
+  "--max-tokens", "32",
+  "--no-fallback",
+  "--audio-ctx", "0",
+  "--no-gpu"
+], { cwd: modelDir });

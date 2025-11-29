@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Live Transcription</title>
+<style>
+  body { margin:0; background:rgba(0,0,0,0.2); color:white; font-family:sans-serif; }
+  #status { position:fixed; top:10px; right:10px; background:rgba(0,0,0,0.6); padding:6px 12px; border-radius:4px; }
+  #text { padding:20px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+  <div id="status">Ready</div>
+  <div id="text">Press Ctrl+Space to start transcription…</div>
+
+<script>
+  const { ipcRenderer } = require("electron");
+  const status = document.getElementById("status");
+  const text = document.getElementById("text");
+
+  ipcRenderer.on("status-update", (_, s) => status.innerText = s);
+  ipcRenderer.on("mic-active", () => { status.innerText = "🎙️ Listening"; text.innerText = ""; });
+  ipcRenderer.on("mic-inactive", () => { status.innerText = "Stopped"; });
+
+  ipcRenderer.on("append-text", (_, t) => {
+    text.innerText += t + "\n";
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+</script>
+</body>
+</html>
